@@ -81,6 +81,8 @@ map <Space> :noh<cr>
 
 " make sure to always write to UNIX file format
 set ff=unix
+set tags=tags;/,/some/place
+
 
 " Ignore whitespace in vimdiff
 :set diffopt+=iwhite
@@ -126,6 +128,4 @@ while parent <= 20
     " TODO: stop at the root on any system and also ~ on Unix.
 endwhile
 unlet parent local_vimrc
-
-"execute pathogen#infect()
 
