@@ -6,12 +6,6 @@ merge = vimdiff
 vimdiff.executable = vim
 vimdiff.args = -d $base $local $output $other -c "wincmd J"
 
-#[hostfingerprints]
-#dalek = 18:4C:A6:B6:FB:E6:82:6E:54:D3:17:2D:57:F5:AF:91:DA:15:F3:F9
-#dalek.lan.azuresummit.com = 18:4C:A6:B6:FB:E6:82:6E:54:D3:17:2D:57:F5:AF:91:DA:15:F3:F9
-#10.76.27.1 = 18:4C:A6:B6:FB:E6:82:6E:54:D3:17:2D:57:F5:AF:91:DA:15:F3:F9
-#
-
 [extensions]
 hgext.extdiff =
 mq = 

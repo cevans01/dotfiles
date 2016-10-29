@@ -22,7 +22,7 @@ Plugin 'DoxygenToolkit.vim'
 " plugin on GitHub repo
 " Plugin 'Shougo/neocomplete.vim'
 Plugin 'tpope/vim-dispatch'
-"Plugin 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'heavenshell/vim-pydocstring'
 Plugin 'rust-lang/rust.vim'
