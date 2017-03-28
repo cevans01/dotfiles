@@ -1,12 +1,12 @@
 #PATH="/opt/Xilinx/Vivado/2015.2/bin:/opt/Xilinx/DocNav:/home/chris/.local/bin:/opt/Xilinx/Vivado/2015.2/bin:/opt/Xilinx/DocNav:/opt/Xilinx/Vivado/2015.2/bin:/opt/Xilinx/DocNav:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/chris/MATLAB/bin:/home/chris/MATLAB/bin:/home/chris/MATLAB/bin"
 
-PATH=$PATH:'/media/chris/e7ff0a70-8c41-477a-b17f-d7de5ed83a80/Xilinx/Vivado/2015.4/bin:/media/chris/e7ff0a70-8c41-477a-b17f-d7de5ed83a80/Xilinx/DocNav'
-
-
-
 # Path to your oh-my-zsh installation.
 export ZSH=/home/chris/.oh-my-zsh
 export PYTHONPATH=$PYTHONPATH:/home/chris/projects
+export PATH=$PATH:/home/chris/.cargo/bin
+export PATH=$PATH:/usr/local/avr32/bin
+export RUST_BACKTRACE=1
+
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -63,7 +63,7 @@ ZSH_THEME="gianu"
 ##plugins=(... python)
 #plugins=(... sudo)
 #plugins=(... wd)
-plugins=(git wd fabric mercurial)
+plugins=(git wd fabric mercurial tmux cargo)
 # WARNING: freaking vagrant plugin wipes out wd plugin for some reason
 #plugins=(... vagrant)
 
@@ -73,7 +73,7 @@ plugins=(git wd fabric mercurial)
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
 
-source ~/.tmuxinator/tmuxinator.zsh
+#source ~/.tmuxinator/tmuxinator.zsh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -100,8 +100,22 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vivado='(\
-       . /media/chris/e7ff0a70-8c41-477a-b17f-d7de5ed83a80/Xilinx/Vivado/2015.4/settings64.sh && \
+       echo "setting DISPLAY to :0.0" && \
+       export DISPLAY=:0.0 && \
+       . /opt/Xilinx/Vivado/2015.2/settings64.sh && \
        cd /home/chris/temp/vivado_crap_files && \
        vivado)'
 
 alias ll='ls -alF'
+
+alias wttr='curl -4 wttr.in'
+
+alias ff='firefox'
+
+alias rzsh='source ~/.zshrc'
+
+alias zmake='cmake -DCMAKE_TOOLCHAIN_FILE=/home/chris/projects/toolchain-arm-ub.cmake'
+
+alias tmux='tmux -2'
+
+alias vimdiff='TERM=xterm-256color vimdiff'
