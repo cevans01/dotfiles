@@ -57,6 +57,7 @@ let g:UltiSnipsListSnippets="<c-l>"
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetDir="~/.vim/UltiSnips"
 
 "Neocomplete
 "let g:neocomplete#enable_at_startup=1
