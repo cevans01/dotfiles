@@ -99,12 +99,12 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vivado='(\
-       echo "setting DISPLAY to :0.0" && \
-       export DISPLAY=:0.0 && \
-       . /opt/Xilinx/Vivado/2015.2/settings64.sh && \
-       cd /home/chris/temp/vivado_crap_files && \
-       vivado)'
+#alias vivado='(\
+#       echo "setting DISPLAY to :0.0" && \
+#       export DISPLAY=:0.0 && \
+#       . /opt/Xilinx/Vivado_Lab/2015.4/settings64.sh && \
+#       cd /home/chris/temp/vivado_crap_files && \
+#       vivado)'
 
 alias ll='ls -alF'
 
@@ -119,3 +119,6 @@ alias zmake='cmake -DCMAKE_TOOLCHAIN_FILE=/home/chris/projects/toolchain-arm-ub.
 alias tmux='tmux -2'
 
 alias vimdiff='TERM=xterm-256color vimdiff'
+
+alias rgdb='rust-gdb -x ~/.rust-gdb.rc'
+
