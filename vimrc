@@ -29,6 +29,8 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 Plugin 'cespare/vim-toml'
+Plugin 'vim-utils/vim-man'
+Plugin 'tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -65,6 +67,8 @@ nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
 nmap <Leader>a: :Tabularize /:\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
+
+nmap <F10> :TagbarToggle<CR>
 
 "Neocomplete
 "let g:neocomplete#enable_at_startup=1
@@ -118,6 +122,8 @@ let g:pydiction_location = '/home/chris/pydiction-1.2/complete-dict'
 if &diff
     colorscheme evening
 endif
+
+:set mouse+=a
 
 
 " Inspired by:
