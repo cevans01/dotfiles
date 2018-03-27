@@ -122,3 +122,7 @@ alias vimdiff='TERM=xterm-256color vimdiff'
 
 alias rgdb='rust-gdb -x ~/.rust-gdb.rc'
 
+alias open='xdg-open'
+
+alias htop='htop -d 5'
+
