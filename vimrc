@@ -20,7 +20,7 @@ Plugin 'DoxygenToolkit.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-" Plugin 'Shougo/neocomplete.vim'
+"Plugin 'Shougo/neocomplete.vim'
 Plugin 'tpope/vim-dispatch'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -49,7 +49,12 @@ filetype plugin indent on    " required
 
 set wildignore+=*.class,*.o     " ignore these types of files
 set wildmenu                    " use a menu to show available matches
-set wildmode=longest:full       " match longest common string and show menu
+set wildmode=longest:full,full       " match longest common string and show menu
+set completeopt=menuone,menu,longest,preview
+
+set backup
+set backupdir=$HOME/.vim/backup
+set directory=$HOME/.vim/swap
 
 " set highlighting colors to work on dark background (default xterms are black)
 " set background=dark
